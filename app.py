@@ -25,7 +25,7 @@ if st.button('Generate Interview question'):
 
     prompt = "Generate Interview question for the role of" + role
 
-    response = clientr.chat.completions.create(
+    response = client.chat.completions.create(
         model="openai/gpt-oss-120b",
         messages=[
             {"role":"system","content": "you are an experienced technical interview."},
