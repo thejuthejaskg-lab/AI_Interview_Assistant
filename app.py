@@ -21,6 +21,7 @@ role = st.selectbox("Select job role",[
     "HR Executive"
 ])
 if st.button('Generate Interview question'):
+    
 
     prompt = "Generate Interview question for the role of" + role
 
@@ -32,8 +33,9 @@ if st.button('Generate Interview question'):
     ]
 )
 
-output = response.choices[0].message.content
-st.write(output)
+    output = response.choices[0].message.content
+    
+    st.write(output)
             
     
 
