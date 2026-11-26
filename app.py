@@ -20,5 +20,22 @@ role = st.selectbox("Select job role",[
     "Software Engineer",
     "HR Executive"
 ])
+if st.button('Generate Interview question'):
+
+    prompt = "Generate Interview question for the role of" + role
+
+    response = clientr.chat.completions.create(
+        model="openai/gpt-oss-120b",
+        messages=[
+            {"role":"system","content": "you are an experienced technical interview."},
+        { "role" : "user","content" :"prompt"}
+    ]
+)
+
+output = response.choice[0].message.content
+st.write(output)
+            
     
+
+  
                     
