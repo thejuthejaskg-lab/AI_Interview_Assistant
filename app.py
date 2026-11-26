@@ -21,7 +21,7 @@ role = st.selectbox("Select job role",[
     "HR Executive"
 ])
 difficulty = st.selectbox("DIfficulty Level",[
-    "Beginer",
+    "Begineer",
     "Intermediate",
     "Advance"
 ])
